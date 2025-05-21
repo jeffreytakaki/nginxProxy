@@ -6,8 +6,9 @@ services:
     ports:
       - "80:80"
     networks:
-      - app-network
+      - mynetwork
 
 networks:
-  app-network:
-    driver: bridge
+  mynetwork:
+    name: mynetwork
+    external: false
