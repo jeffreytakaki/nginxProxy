@@ -5,23 +5,6 @@ services:
     build: .
     ports:
       - "80:80"
-    depends_on:
-      - app1
-      - app2
-    networks:
-      - app-network
-
-  app1:
-    image: simplesite-frontend
-    ports:
-      - "5001:5001"
-    networks:
-      - app-network
-
-  app2:
-    image: simplesite-2-frontend
-    ports:
-      - "5002:5002"
     networks:
       - app-network
 
